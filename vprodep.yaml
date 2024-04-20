@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: vproapp
-          image: nginx
+          image: thiru1512/vprofileapp:latest
           ports:
             - name: vproapp-port
               containerPort: 8080
