@@ -5,6 +5,9 @@ metadata:
   labels:
     app: vprodb
 spec:
+  selector:
+    matchLabels:
+      app: vprodb
   replicas: 1
   selector:
     matchLabels:
@@ -28,8 +31,8 @@ spec:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
                  secretKeyRef:
-                   - name: app-secret
-                     key: db-pass
+                    name: app-secret
+                    key: db-pass
       nodeSelector:
         zone: us-east-2a
       volumes:
